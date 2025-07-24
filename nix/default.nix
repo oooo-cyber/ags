@@ -98,6 +98,8 @@ in
     postPatch = ''
       chmod +x post_install.sh
       patchShebangs post_install.sh
+      rm $out/bin/.ags-wrapped
+	    cp $out/bin/ags $out/bin/agsv1
     '';
 
     outputs = ["out" "lib"];
