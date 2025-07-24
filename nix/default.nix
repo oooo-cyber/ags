@@ -47,7 +47,7 @@ in
         path = lib.cleanSource ../.;
       };
 
-      dontBuild = false;
+      dontBuild = true;
 	postBuild = ''
 	  rm $out/bin/.ags-wrapped
 	  cp $out/bin/ags $out/bin/agsv1
